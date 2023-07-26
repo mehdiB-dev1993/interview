@@ -3,7 +3,7 @@ namespace App\core;
 
 class Request
 {
-    public  $REDIRECT_STATUS;
+  //  public  $REDIRECT_STATUS;
     public  $HTTP_HOST;
     public  $HTTP_CONNECTION;
     //public  $HTTP_CACHE_CONTROL;
@@ -14,7 +14,7 @@ class Request
     public  $HTTP_ACCEPT_LANGUAGE;
     public  $PATH;
     public  $SystemRoot;
-    public  $COMSPEC;
+ //   public  $COMSPEC;
     public  $PATHEXT;
     public  $WINDIR;
     public  $SERVER_SIGNATURE;
@@ -44,18 +44,18 @@ class Request
     public  $REQUEST;
     public function __construct()
     {
-         $this->REDIRECT_STATUS = $_SERVER['REDIRECT_STATUS'];
+        // $this->REDIRECT_STATUS = $_SERVER['REDIRECT_STATUS'];
          $this->HTTP_HOST = $_SERVER['HTTP_HOST'];
          $this->HTTP_CONNECTION = $_SERVER['HTTP_CONNECTION'];
         // $this->HTTP_CACHE_CONTROL = $_SERVER['HTTP_CACHE_CONTROL'];
        //  $this->HTTP_UPGRADE_INSECURE_REQUESTS = $_SERVER['HTTP_UPGRADE_INSECURE_REQUESTS'];
-         $this->HTTP_USER_AGENT = $_SERVER['HTTP_USER_AGENT'];
+       // $this->HTTP_USER_AGENT = $_SERVER['HTTP_USER_AGENT'];
          $this->HTTP_ACCEPT = $_SERVER['HTTP_ACCEPT'];
          $this->HTTP_ACCEPT_ENCODING = $_SERVER['HTTP_ACCEPT_ENCODING'];
          $this->HTTP_ACCEPT_LANGUAGE = $_SERVER['HTTP_ACCEPT_LANGUAGE'];
          $this->PATH = $_SERVER['PATH'];
          $this->SystemRoot = $_SERVER['SystemRoot'];
-         $this->COMSPEC = $_SERVER['COMSPEC'];
+        // $this->COMSPEC = $_SERVER['COMSPEC'];
          $this->PATHEXT = $_SERVER['PATHEXT'];
          $this->WINDIR = $_SERVER['WINDIR'];
          $this->SERVER_SIGNATURE = $_SERVER['SERVER_SIGNATURE'];
@@ -71,8 +71,8 @@ class Request
          $this->SERVER_ADMIN = $_SERVER['SERVER_ADMIN'];
          $this->SCRIPT_FILENAME = $_SERVER['SCRIPT_FILENAME'];
          $this->REMOTE_PORT = $_SERVER['REMOTE_PORT'];
-         $this->REDIRECT_URL = $_SERVER['REDIRECT_URL'];
-         $this->REDIRECT_QUERY_STRING = $_SERVER['REDIRECT_QUERY_STRING'];
+       //  $this->REDIRECT_URL = $_SERVER['REDIRECT_URL'];
+       //  $this->REDIRECT_QUERY_STRING = $_SERVER['REDIRECT_QUERY_STRING'];
          $this->GATEWAY_INTERFACE = $_SERVER['GATEWAY_INTERFACE'];
          $this->SERVER_PROTOCOL = $_SERVER['SERVER_PROTOCOL'];
          $this->REQUEST_METHOD = $_SERVER['REQUEST_METHOD'];

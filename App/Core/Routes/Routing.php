@@ -2,9 +2,8 @@
 
 namespace App\Core\Routes;
 
-use App\Controllers\HomeController;
-use App\core\Routes\Route;
-use App\core\Request;
+use App\Core\Routes\Route;
+use App\Core\Request;
 
 class Routing
 {

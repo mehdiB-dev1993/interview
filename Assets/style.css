@@ -1,0 +1,21 @@
+*
+{
+    direction: rtl;
+}
+
+.container
+{
+
+}
+
+.container .sidebar
+{
+    width: 300px;
+    background: #303c47;
+    height: 100vh;
+}
+
+.container .main
+{
+
+}
