@@ -34,3 +34,20 @@
 {
     background-position: left 0.75rem center!important;
 }
+
+
+.mask
+{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000008f;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+.modal-header
+{
+    flex-direction: row-reverse;
+}

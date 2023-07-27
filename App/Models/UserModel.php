@@ -2,28 +2,21 @@
 namespace App\Models;
 
 use App\Core\DB;
+use App\Helper\Helper;
 
 class UserModel
 
 {
     public function AddEmployee()
     {
+         $db = new DB();
 
-        $db = new DB();
+         $id = $db->Create('users',$_POST['formData']);
 
-        $query = "INSERT INTO users (username,password,fullname,email,phone,address,gender)
-                                    VALUES (:username, :password, :fullname,:email,:phone,:address,:gender)";
-        $lastInsertId = $db->Create($query,$_POST);
-        $aliasName = $_POST['aliasName'];
-        $query = "Insert Into user_role (userID,alias_name) values (:lastInsertId,:aliasName)";
-        $db->Create($query,['lastInsertId' => $lastInsertId,'aliasName' => $aliasName]);
-        return  $lastInsertId;
+         $_POST['formData2']['userID'] = $id;
 
-
-
-
-
-
+         $result = $db->create('user_role',$_POST['formData2']);
+         return $id;
 
     }
 }

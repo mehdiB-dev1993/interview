@@ -31,36 +31,21 @@ class DB
 
     }
 
-    public function Create($query,$data)
+    public function Create($tableName,$data)
     {
-
+        $columns = array_keys($data);
+        $query = "INSERT INTO $tableName (" . implode(', ', $columns) . ") VALUES (:" . implode(', :', $columns) . ")";
 
         $stmt = $this->connection->prepare($query);
+
         foreach ($data as $key => $val) {
-            $stmt->bindValue(':'.$key, $val);
+            $stmt->bindValue(':'. $key, $val);
+
         }
         $stmt->execute();
         return $this->connection->lastInsertId();
-        /*
-        $fullName = $_REQUEST['fullName'];
-        $username = $_REQUEST['username'];
-        $password = $_REQUEST['password'];
-        $email = $_REQUEST['email'];
-        $phone = $_REQUEST['phone'];
-        $address = $_REQUEST['address'];
-        $gender = $_REQUEST['gender'];
 
-        $stmt = $this->connection->prepare("INSERT INTO users (username,password,fullname,email,phone,address,gender)
-                                    VALUES (:username, :password, :fullname,:email,:phone,:address,:gender)");
-        $stmt->bindParam(':fullname', $fullName);
-        $stmt->bindParam(':username', $username);
-        $stmt->bindParam(':password', $password);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':phone', $phone);
-        $stmt->bindParam(':address', $address);
-        $stmt->bindParam(':gender', $gender);
-        $stmt->execute();
-*/
+
     }
 
     public function Read($sql,$fetch='')
