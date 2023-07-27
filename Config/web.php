@@ -3,4 +3,5 @@
 
 use App\Core\Routes\Route;
 
-Route::Get('/index','Home@index');
+Route::Get('/','Home@index');
+Route::Post('/employee/add','User@insert');

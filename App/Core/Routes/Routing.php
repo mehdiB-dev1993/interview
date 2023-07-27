@@ -27,8 +27,10 @@ class Routing
       $status = 0;
       foreach ($this->Routes as $key => $val)
       {
+
           if($val['METHOD'] === strtolower($this->CMethod) && strtolower($val['URI']) == str_replace('//', '/', strtolower($this->CR)))
           {
+            //  echo $val['METHOD'] . ' -- ' .strtolower($this->CMethod) . ' -- ' . strtolower($val['URI']) . ' -- ' . str_replace('//', '/', strtolower($this->CR));
               $status = 1;
               $this->Action =  $this->ExplodeAction($val['ACTION']);
           }
@@ -45,8 +47,11 @@ class Routing
   }
   public function RunController()
   {
+
       if($this->checkExistRoute() === 1 ){
+
           $class = 'App\\Controllers\\' . $this->Action['class'] .'Controller';
+
           $fn = $this->Action['func'];
           $controller = new $class;
           $controller->$fn();

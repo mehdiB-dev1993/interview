@@ -8,14 +8,29 @@
 
 }
 
-.container .sidebar
+.container .header
 {
-    width: 300px;
-    background: #303c47;
-    height: 100vh;
+    height: 100px;
+    background: lightgrey;
+    margin: 0 0 20px 0;
+    border-bottom: 5px solid dodgerblue;
+}
+
+.container .options
+{
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid grey;
+    border-top: 2px solid grey;
+    padding: 10px 0;
+
 }
 
 .container .main
 {
 
+}
+
+.users
+{
+    background-position: left 0.75rem center!important;
 }
